@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover the story behind SUNFLOWER PHOTOGRAPHY. We capture beautiful moments through professional photography and videography in Ghana.">
+
+    <title>About Us | SUNFLOWER PHOTOGRAPHY</title>
+
+    <!-- Existing Website Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="header">
+
+        <nav class="navbar container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon"></span>
+                SUNFLOWER<span class="logo-light">PHOTOGRAPHY</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+
+<li><a href="packages.html">Packages</a></li>
+<li><a href="book-a-session.html" class="nav-cta">Book a Session</a></li>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- OUR STORY SECTION -->
+        <section class="section about">
+
+            <div class="container about-grid">
+
+                <!-- IMAGE -->
+                <div class="about-image">
+
+                    <img
+                        src="img/$unflowerPhotoGraphy(akua).jpg"
+                        alt="SUNFLOWER PHOTOGRAPHY professional photography"
+                        loading="lazy"
+                    >
+
+                    <div class="image-caption">
+                        THE ART OF STORYTELLING
+                    </div>
+
+                </div>
+
+
+                <!-- OUR STORY TEXT -->
+                <div class="about-content">
+
+                    <p class="eyebrow">
+                        OUR STORY
+                    </p>
+
+                    <h2>
+                        More Than Pictures.<br>
+                        <em>Memories That Last.</em>
+                    </h2>
+
+                    <p>
+                        At SUNFLOWER PHOTOGRAPHY, we believe every
+                        photograph has a story to tell. From the joy
+                        of a wedding day to the excitement of a special
+                        event, we capture the emotions, details and
+                        moments that make your story unique.
+                    </p>
+
+                    <p>
+                        Our approach combines creativity, attention
+                        to detail and professional editing to deliver
+                        photographs and videos that you can revisit
+                        for years to come.
+                    </p>
+
+                    <a href="book-a-session.html" class="text-link">Let's tell your story →</a>
+                       
+                    
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-main">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon"></span>
+
+                SUNFLOWER<span class="logo-light">PHOTOGRAPHY</span>
+
+            </a>
+
+            <p>
+                Every moment deserves to be remembered.
+            </p>
+
+            <a href="#" class="back-top">
+                Back to top ↑
+            </a>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © <span id="year"></span>
+                SUNFLOWER PHOTOGRAPHY. All rights reserved.
+            </p>
+
+            <p>
+                Photography · Videography · Storytelling
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Mobile Navigation
+        const menuToggle = document.getElementById("menuToggle");
+
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+
+        });
+
+
+        // Close Mobile Menu After Clicking a Link
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.textContent = "☰";
+
+            });
+
+        });
+
+
+        // Automatic Copyright Year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+
+</html>
+
+>

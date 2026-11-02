@@ -1,0 +1,1545 @@
+
+/* ==========================================
+   SUNFLOWER PHOTOGRAPHY
+   Premium Photography Website
+   ========================================== */
+
+:root {
+    --dark: #151512;
+    --dark-soft: #20201b;
+    --gold: #d6ad60;
+    --gold-light: #efd39a;
+    --cream: #f8f5ee;
+    --white: #ffffff;
+    --muted: #aaa79e;
+    --text: #292820;
+    --border: rgba(214, 173, 96, 0.25);
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.container {
+    width: min(1160px, 90%);
+    margin-inline: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    margin-bottom: 22px;
+}
+
+h2 em,
+h1 em {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+p {
+    color: inherit;
+}
+
+/* Navigation */
+
+.header {
+    background: var(--dark);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    color: var(--gold);
+    font-size: 1.65rem;
+    margin-right: 3px;
+}
+
+.logo-light {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+    color: #e1dfd7;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-links .nav-cta {
+    border: 1px solid var(--gold);
+    padding: 12px 17px;
+    color: var(--gold);
+}
+
+.nav-links .nav-cta:hover {
+    background: var(--gold);
+    color: var(--dark);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: var(--gold);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 25px;
+    border: 1px solid transparent;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--dark);
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+}
+
+.btn-outline {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--dark);
+}
+
+.btn-dark {
+    background: var(--dark);
+    color: var(--white);
+    width: 100%;
+}
+
+.btn-dark:hover {
+    background: #38372e;
+}
+
+/* Hero */
+
+.hero {
+    position: relative;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background:
+        url("img/SunflowerPhotoGraphy.16jpg.jpg")
+        center 45% / cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(15, 15, 12, 0.92) 0%,
+        rgba(15, 15, 12, 0.68) 52%,
+        rgba(15, 15, 12, 0.16) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.hero h1 {
+    font-size: clamp(3.2rem, 7vw, 6.1rem);
+    letter-spacing: -2px;
+    max-width: 800px;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    max-width: 490px;
+    font-size: 1rem;
+    color: #e2dfd7;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-location {
+    color: #d0ccc1;
+    font-size: 0.76rem;
+    letter-spacing: 1.4px;
+    margin-top: 35px;
+}
+
+/* About */
+
+.about {
+    background: var(--cream);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    height: 490px;
+    background: #e3ded1;
+}
+
+.about-image img {
+    object-position: center;
+}
+
+.image-caption {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    padding: 13px 18px;
+    background: var(--dark);
+    color: var(--gold);
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+}
+
+.about-content > p:not(.eyebrow) {
+    color: #66635b;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 700;
+    color: #8d692a;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 4px;
+}
+
+/* Section headings */
+
+.section-heading {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 55px;
+}
+
+.section-heading > p:last-child {
+    color: #79766c;
+    font-size: 0.94rem;
+}
+
+/* Services */
+
+.services {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    position: relative;
+    padding: 34px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: border-color 0.3s, transform 0.3s;
+}
+.service-image {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+    display: block;
+    margin: 20px 0;
+}
+
+.service-card {
+    overflow: hidden;
+}
+.service-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.service-number {
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.service-icon {
+    font-size: 2.1rem;
+    color: var(--gold);
+    margin: 24px 0 20px;
+}
+
+.service-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #b8b5ac;
+    font-size: 0.87rem;
+}
+
+/* Portfolio */
+
+.portfolio {
+    background: #eeebe3;
+}
+
+
+
+/* =================================
+   HOMEPAGE - PINTEREST MASONRY GALLERY
+================================= */
+
+#home-gallery .gallery {
+    position: relative;
+    width: 100%;
+}
+
+#home-gallery .gallery-item {
+    position: absolute;
+    display: block;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+#home-gallery .gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Keep images natural on hover */
+#home-gallery .gallery-item:hover img {
+    transform: none;
+}
+
+/* Remove extra space below gallery */
+#home-gallery {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#home-gallery .container {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* MOBILE PHONES */
+@media (max-width: 480px) {
+    .gallery {
+        columns: 2;
+    }
+}
+
+.gallery-label {
+    position: absolute;
+    z-index: 2;
+    bottom: 22px;
+    left: 22px;
+    color: var(--white);
+}
+
+.gallery-label span {
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+}
+
+.gallery-label h3 {
+    font-size: 1.4rem;
+}
+
+.gallery-note {
+    text-align: center;
+    font-size: 0.76rem;
+    color: #777369;
+    margin-top: 25px;
+}
+
+
+/* Packages */
+
+.packages {
+    background: var(--cream);
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.package-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px;
+    border: 1px solid #ded8c9;
+    background: #fffefa;
+}
+
+.package-card.featured {
+    background: var(--dark);
+    color: var(--white);
+    border-color: var(--gold);
+}
+
+.popular-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 12px;
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.package-type {
+    color: #9a7739;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.package-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+
+.package-price {
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    white-space: nowrap;
+}
+
+.package-description {
+    font-size: 0.85rem;
+    color: #777369;
+    min-height: 70px;
+    margin-bottom: 25px;
+}
+
+.package-card.featured .package-description {
+    color: #c1beb4;
+}
+
+.package-card .btn {
+    margin-top: auto;
+}
+
+.package-note {
+    text-align: center;
+    max-width: 760px;
+    margin: 30px auto 0;
+    color: #777369;
+    font-size: 0.8rem;
+}
+
+/* Booking banner */
+
+.booking-banner {
+    background:
+        linear-gradient(rgba(19, 19, 15, 0.86), rgba(19, 19, 15, 0.88)),
+        url("img/SunflowerPhotoGraphy.jpg")
+        center / cover no-repeat;
+    color: var(--white);
+    text-align: center;
+    padding: 95px 0;
+}
+
+.booking-content h2 {
+    margin-bottom: 20px;
+}
+
+.booking-content > p:not(.eyebrow) {
+    color: #d0ccc1;
+    margin-bottom: 30px;
+}
+
+/* Contact */
+
+.contact {
+    background: #eeebe3;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 80px;
+}
+
+.contact-intro > p:not(.eyebrow) {
+    color: #6f6c62;
+    margin-bottom: 32px;
+}
+
+.contact-detail {
+    padding: 18px 0;
+    border-top: 1px solid #d8d2c4;
+}
+
+.contact-detail span {
+    color: #987438;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-detail p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 35px;
+    border: 1px solid #e1dccf;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    min-width: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid #ddd8cc;
+    background: #fcfbf8;
+    color: var(--text);
+    outline: none;
+    border-radius: 0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #b58b40;
+    box-shadow: 0 0 0 2px rgba(214, 173, 96, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-submit {
+    width: 100%;
+}
+
+.form-note {
+    margin-top: 14px;
+    color: #777369;
+    font-size: 0.76rem;
+}
+
+/* Footer */
+
+.footer {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+}
+
+.footer-main > p {
+    color: #b8b5ac;
+    font-size: 0.85rem;
+}
+
+.back-top {
+    color: var(--gold);
+    font-size: 0.83rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: #aaa79e;
+    font-size: 0.74rem;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+    }
+
+    .logo {
+        font-size: 0.8rem;
+        letter-spacing: 0.7px;
+    }
+
+    .about-grid,
+    .contact-grid {
+        gap: 40px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .package-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .section {
+        padding: 70px 0;
+    }
+
+    .navbar {
+        min-height: 72px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        padding: 20px 5% 28px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--dark);
+        border-top: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 12px 0;
+        font-size: 0.9rem;
+    }
+
+    .nav-links .nav-cta {
+        display: inline-block;
+        text-align: center;
+        margin-top: 10px;
+        padding: 12px 16px;
+    }
+
+    .hero {
+        min-height: 620px;
+        background-position: 60% center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(15, 15, 12, 0.9),
+            rgba(15, 15, 12, 0.56)
+        );
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 11vw, 4.4rem);
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 0.92rem;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 280px;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 28px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 220px;
+        gap: 12px;
+    }
+
+    .gallery-item. {
+        grid-row: span 1;
+    }
+
+    .gallery-label {
+        bottom: 12px;
+        left: 13px;
+    }
+
+    .gallery-label h3 {
+        font-size: 1.1rem;
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-description {
+        min-height: 0;
+    }
+
+    .booking-banner {
+        padding: 75px 0;
+    }
+
+    .contact-form {
+        padding: 24px 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .footer-main,
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-main {
+        gap: 15px;
+    }
+}
+
+/* FOOTER SOCIAL MEDIA LINKS */
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 4px 0;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #d4af70;
+    text-decoration: none;
+    font-size: 11px;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.footer-socials a:hover {
+    color: #ffffff;
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================
+   SUNFLOWER PHOTOGRAPHY - SERVICES PAGE
+========================================= */
+
+/* Services Section */
+.services {
+    background: #f8f6f1;
+    padding: 100px 0;
+}
+
+/* Section Heading */
+.services .section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.services .section-heading .eyebrow {
+    color: #b38b45;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.services .section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    color: #171717;
+    margin-bottom: 18px;
+}
+
+.services .section-heading h2 em {
+    color: #b38b45;
+    font-style: italic;
+}
+
+.services .section-heading > p:last-child {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Services Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+
+/* Individual Service Card */
+.service-card {
+    position: relative;
+    background: #ffffff;
+    padding: 0 0 30px;
+    overflow: hidden;
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Service Number */
+.service-number {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    background: #b38b45;
+    color: #ffffff;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* Service Images */
+.service-card .service-image {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.04);
+}
+
+
+/* Service Titles */
+.service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #171717;
+    margin: 25px 25px 12px;
+}
+
+
+/* Service Description */
+.service-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0 25px;
+}
+
+
+/* =========================================
+   BOOKING BANNER
+========================================= */
+
+.booking-banner {
+    background: #171717;
+    padding: 90px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.booking-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.booking-content .eyebrow {
+    color: #c6a15c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.booking-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 20px;
+}
+
+.booking-content h2 em {
+    color: #c6a15c;
+}
+
+.booking-content > p:not(.eyebrow) {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* Booking Button */
+.booking-content .btn-gold {
+    display: inline-block;
+    background: #b38b45;
+    color: #ffffff;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.booking-content .btn-gold:hover {
+    background: #967238;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    .service-grid {
+        gap: 25px;
+    }
+
+    .service-card .service-image {
+        height: 280px;
+    }
+
+}
+
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+
+    .services {
+        padding: 70px 0;
+    }
+
+    .services .section-heading {
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-card .service-image {
+        height: 260px;
+    }
+
+    .service-card h3 {
+        font-size: 23px;
+    }
+
+    .booking-banner {
+        padding: 70px 20px;
+    }
+
+}
+
+/* SERVICES PAGE */
+
+.services {
+    background: #f8f6f1;
+    padding: 100px 0;
+}
+
+.services .section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.services .eyebrow {
+    color: #b38b45;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.services .section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.services .section-heading h2 em {
+    color: #b38b45;
+}
+
+.services .section-heading p:last-child {
+    color: #777;
+    line-height: 1.8;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.service-image {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.03);
+}
+
+.service-info {
+    padding: 25px;
+}
+
+.service-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #171717;
+}
+
+.service-info p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+
+    .services {
+        padding: 65px 0;
+    }
+
+    .services .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-image {
+        height: 280px;
+    }
+
+}
+
+/* =====================================
+   SERVICES PAGE
+===================================== */
+
+.services {
+    background: #f8f6f1;
+    padding: 100px 0;
+}
+
+/* SERVICES HEADING */
+
+.services .section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.services .eyebrow {
+    color: #b38b45;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.services .section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 48px);
+    margin-bottom: 15px;
+    color: #171717;
+}
+
+.services .section-heading h2 em {
+    color: #b38b45;
+}
+
+.services .section-heading p:last-child {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* SERVICE GRID */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* SERVICE CARD */
+
+.service-card {
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+/* SERVICE NUMBER */
+
+.service-number {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b38b45;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* SERVICE IMAGE */
+
+.service-image {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.03);
+}
+
+/* SERVICE TEXT */
+
+.service-info {
+    padding: 25px;
+}
+
+.service-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #171717;
+    margin-bottom: 12px;
+}
+
+.service-info p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+
+    .services {
+        padding: 65px 0;
+    }
+
+    .services .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .services .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-image {
+        height: 280px;
+    }
+
+}
+
+/* =====================================
+   SERVICES PAGE - FOUR ITEMS ONLY
+===================================== */
+
+.services-gallery {
+    background: #f8f6f1;
+    padding: 80px 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+/* NUMBER */
+.service-number {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b38b45;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* IMAGE */
+.service-image {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.03);
+}
+
+/* SERVICE DETAILS */
+.service-info {
+    padding: 25px;
+}
+
+.service-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #171717;
+    margin-bottom: 12px;
+}
+
+.service-info p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #777777;
+    line-height: 1.9;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 650px) {
+
+    .services-gallery {
+        padding: 40px 0;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-image {
+        height: 280px;
+    }
+
+}
+.section-heading .section-label {
+    color: var(--gold);
+}
+
+.section-heading h1 {
+    color: var(--gold);
+    font-weight: 400;
+}
+/* SERVICES PAGE HEADING */
+
+.section-heading .section-label {
+    color: var(--gold);
+}
+
+.section-heading h1 {
+    color: #171717;
+    font-weight: 700;
+}
+
+.services-heading .services-label {
+    display: block;
+    text-align: center;
+}
+
+.services-heading h1 {
+    text-align: center;
+}
+
+.services-heading p {
+    text-align: center;
+}
+.booking-banner {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("img/SunflowerPhotoGraphy.jpg") center center / cover no-repeat;
+}
+.contact {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("img/ring.jpg") center center / cover no-repeat;
+}

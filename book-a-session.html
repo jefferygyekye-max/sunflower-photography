@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your wedding, portrait, event photography and videography with SUNFLOWER PHOTOGRAPHY in Ghana.">
+
+    <title>Book a Session | SUNFLOWER PHOTOGRAPHY</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon"></span>
+                SUNFLOWER<span class="logo-light">PHOTOGRAPHY</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+               <li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+
+<li><a href="packages.html">Packages</a></li>
+<li><a href="book-a-session.html" class="nav-cta">Book a Session</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Contact / Book a Session -->
+        <section class="section contact" id="contact">
+
+            <div class="container contact-grid">
+
+                <div class="contact-intro">
+
+                    <p class="eyebrow">GET IN TOUCH</p>
+
+                    <h2>Let's Make Your<br><em>Memories Last.</em></h2>
+
+                    <p>
+                        Tell us about your event, preferred date and the
+                        services you need. We'll get back to you to
+                        discuss the details.
+                    </p>
+
+                    <div class="contact-detail">
+                        <span>LOCATION</span>
+                        <p>Ghana</p>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span>INSTAGRAM</span>
+                        <p>Find us on Instagram and explore our work.</p>
+                    </div>
+
+                </div>
+
+                <!-- Booking Form -->
+                <form class="contact-form" id="bookingForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name"
+                                   required placeholder="Full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                   required placeholder="Your phone number">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Required</label>
+
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option>Wedding Photography</option>
+                            <option>Event Photography</option>
+                            <option>Portrait Photography</option>
+                            <option>Videography</option>
+                            <option>Photography & Videography</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="date">Event Date</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Event Location</label>
+                            <input type="text" id="location" name="location"
+                                   placeholder="City or venue">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Event</label>
+
+                        <textarea id="message" name="message" rows="4"
+                                  placeholder="Share your plans and requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold form-submit">
+                        Send Booking Enquiry →
+                    </button>
+
+                    <p class="form-note" id="formNote">
+                        Your enquiry will open in WhatsApp for you to send.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-main">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon"></span>
+                SUNFLOWER<span class="logo-light">PHOTOGRAPHY</span>
+            </a>
+
+            <p>Every moment deserves to be remembered.</p>
+
+            <a href="#" class="back-top">Back to top ↑</a>
+
+        </div>
+
+        <div class="container footer-bottom">
+
+            <p>
+                © <span id="year"></span> SUNFLOWER PHOTOGRAPHY.
+                All rights reserved.
+            </p>
+
+            <p>Photography · Videography · Storytelling</p>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+        // Mobile navigation
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.textContent = "☰";
+
+            });
+
+        });
+
+        // Automatic copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Booking enquiry via WhatsApp
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const whatsappNumber = "233558882868";
+
+            const data = new FormData(this);
+
+            const message = [
+                "Hello SUNFLOWER PHOTOGRAPHY, I would like to make a booking enquiry.",
+                "",
+                "Name: " + data.get("name"),
+                "Phone: " + data.get("phone"),
+                "Service: " + data.get("service"),
+                "Event date: " + (data.get("date") || "Not specified"),
+                "Location: " + (data.get("location") || "Not specified"),
+                "Details: " + (data.get("message") || "Not specified")
+            ].join("\n");
+
+            window.open(
+                "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>
